@@ -19,8 +19,8 @@
 		{#each tennantlist as tennant}
 			<a
 				class={`/dashboard${tennant.slug}` === $page.url.pathname
-					? 'p-2 my-2 border bg-red-300'
-					: 'p-2 my-2 border bg-red-200'}
+					? 'p-2 my-2 border bg-red-300 shadow-inner'
+					: 'p-2 my-2 border bg-red-200 shadow-inner'}
 				href="/dashboard{tennant.slug}"
 			>
 				{tennant.label}
