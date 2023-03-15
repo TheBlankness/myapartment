@@ -1,5 +1,6 @@
 <script>
 	import { onMount } from 'svelte';
+	import axios from 'axios';
 
 	$: complaints = [];
 
@@ -25,19 +26,21 @@
 
 	export async function deleteComplaint(id) {
 		console.log(id);
-		try {
-			// var body = new FormData();
-			// body.append('identifier', 'test@email.com');
-			// body.append('password', 'test123');
-			const fetchResponse = await fetch('https://api-apartment.lawcloud.page/api/complaints', {
-				method: 'GET'
-			});
-			const data = await fetchResponse.json();
-			complaints = data.data;
-			console.log(data);
-		} catch (e) {
-			console.error(e);
-		}
+		axios.delete(`https://api-apartment.lawcloud.page/api/complaints/${id}`).then(() => {
+			fetchComplaints();
+		});
+		// try {
+		// 	// var body = new FormData();
+		// 	// body.append('identifier', 'test@email.com');
+		// 	// body.append('password', 'test123');
+		// 	const fetchResponse = await fetch(`http://192.168.68.111:1338/api/complaints/${id}`, {
+		// 		method: 'DELETE'
+		// 	});
+		// 	const data = await fetchResponse.json();
+		// 	console.log(data);
+		// } catch (e) {
+		// 	console.error(e);
+		// }
 	}
 
 	function formatDate(dateString) {
