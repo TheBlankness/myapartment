@@ -49,9 +49,9 @@
 	}
 </script>
 
-<h1>complaints</h1>
+<h1 class="text-red-300 text-lg">complaints</h1>
 
-<table class="table-auto">
+<table class="table-auto shadow-inner">
 	<tr>
 		<th>ID</th>
 		<th>Title</th>
