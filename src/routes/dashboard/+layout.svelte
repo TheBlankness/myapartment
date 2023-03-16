@@ -1,5 +1,7 @@
 <script>
 	import { page } from '$app/stores';
+	import { PUBLIC_WEB_PREFIX } from '$env/static/public';
+
 	let tennantlist = [
 		{ label: 'Overview', slug: '' },
 		{ label: 'Make Complaint', slug: '/complaints' },
@@ -21,7 +23,7 @@
 				class={`/dashboard${tennant.slug}` === $page.url.pathname
 					? 'p-2 my-2 border bg-red-300 shadow-inner'
 					: 'p-2 my-2 border bg-red-200 shadow-inner'}
-				href="/dashboard{tennant.slug}"
+				href="{PUBLIC_WEB_PREFIX}/dashboard{tennant.slug}"
 			>
 				{tennant.label}
 			</a>
