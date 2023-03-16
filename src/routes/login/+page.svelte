@@ -10,7 +10,7 @@
 			var body = new FormData();
 			body.append('identifier', 'test@email.com');
 			body.append('password', 'test123');
-			const fetchResponse = await fetch('https://api-apartment.lawcloud.page/api/auth/local', {
+			const fetchResponse = await fetch('https://myapartment.lawcloud.page/api/auth/local', {
 				method: 'POST',
 				body: body
 			});

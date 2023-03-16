@@ -9,7 +9,7 @@
 			// var body = new FormData();
 			// body.append('identifier', 'test@email.com');
 			// body.append('password', 'test123');
-			const fetchResponse = await fetch('https://api-apartment.lawcloud.page/api/complaints', {
+			const fetchResponse = await fetch('https://myapartment.lawcloud.page/api/complaints', {
 				method: 'GET'
 			});
 			const data = await fetchResponse.json();
@@ -26,7 +26,7 @@
 
 	export async function deleteComplaint(id) {
 		console.log(id);
-		axios.delete(`https://api-apartment.lawcloud.page/api/complaints/${id}`).then(() => {
+		axios.delete(`https://myapartment.lawcloud.page/api/complaints/${id}`).then(() => {
 			fetchComplaints();
 		});
 		// try {
