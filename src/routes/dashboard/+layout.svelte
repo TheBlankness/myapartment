@@ -1,6 +1,5 @@
 <script>
 	import { page } from '$app/stores';
-	import { PUBLIC_WEB_PREFIX } from '$env/static/public';
 
 	let tennantlist = [
 		{ label: 'Overview', slug: '' },
@@ -10,7 +9,6 @@
 		{ label: 'Request Maintenance', slug: '/maintenances' },
 		{ label: 'Pay Bills', slug: '/bills' }
 	];
-	console.log($page.url.pathname);
 </script>
 
 <div class="flex flex-col sm:flex-row">
@@ -23,11 +21,12 @@
 				class={`/dashboard${tennant.slug}` === $page.url.pathname
 					? 'p-2 my-2 border bg-red-300 shadow-inner'
 					: 'p-2 my-2 border bg-red-200 shadow-inner'}
-				href="{PUBLIC_WEB_PREFIX}/dashboard{tennant.slug}"
+				href="/dashboard{tennant.slug}"
 			>
 				{tennant.label}
 			</a>
 		{/each}
+		<a class="p-2 my-2 border bg-red-300 shadow-inner" href="/logout"> logout </a>
 	</div>
 	<div><slot /></div>
 </div>
