@@ -7,7 +7,8 @@
 		{ label: 'Rent Event Space', slug: '/events' },
 		{ label: 'Tennant Out-form', slug: '/out-forms' },
 		{ label: 'Request Maintenance', slug: '/maintenances' },
-		{ label: 'Pay Bills', slug: '/bills' }
+		{ label: 'Pay Bills', slug: '/bills' },
+		{ label: 'Make New Tennat', slug: '/new-tennat' }
 	];
 </script>
 

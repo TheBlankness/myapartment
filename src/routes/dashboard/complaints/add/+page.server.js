@@ -1,4 +1,3 @@
-/** @type {import('./$types').Actions} */
 import axios from 'axios';
 import { redirect } from '@sveltejs/kit';
 import { PUBLIC_API_URL } from '$env/static/public';
