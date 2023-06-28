@@ -14,47 +14,48 @@
 <h1 class="text-red-300 text-lg">Events</h1>
 <a
 	class="bg-green-500 text-white active:bg-orange-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-	href={`${$page.route.id}/add`}>Add</a
+	href={`${$page.route.id}/add`}
 >
-<table class="table-auto shadow-inner">
+	Add
+</a>
+
+<table class="table-auto shadow-inner mt-5">
 	<tr>
-		<th>ID</th>
-		<th>Title</th>
-		<th>Description</th>
-		<th>Created At</th>
-		<!-- <th>Updated At</th>
-		<th>Published At</th> -->
-		<th>Solved?</th>
-		<th>View</th>
-		<th>Delete</th>
+		<th class="border px-4 py-2">ID</th>
+		<th class="border px-4 py-2">Title</th>
+		<th class="border px-4 py-2">Description</th>
+		<th class="border px-4 py-2">Created At</th>
+		<th class="border px-4 py-2">Solved?</th>
+		<th class="border px-4 py-2">View</th>
+		<th class="border px-4 py-2">Delete</th>
 	</tr>
 
 	{#each complaints as item}
 		<tr>
-			<td>{item.id}</td>
-			<td>{item.attributes.Title}</td>
-			<td>{item.attributes.Description}</td>
-			<td>{formatDate(item.attributes.createdAt)}</td>
-			<!-- <td>{formatDate(item.attributes.updatedAt)}</td>
-			<td>{formatDate(item.attributes.publishedAt)}</td> -->
-			<td>{item.attributes.solved ? 'Yes' : 'No'}</td>
-			<td
-				><a
+			<td class="border px-4 py-2">{item.id}</td>
+			<td class="border px-4 py-2">{item.attributes.Title}</td>
+			<td class="border px-4 py-2">{item.attributes.Description}</td>
+			<td class="border px-4 py-2">{formatDate(item.attributes.createdAt)}</td>
+			<td class="border px-4 py-2">{item.attributes.solved ? 'Yes' : 'No'}</td>
+			<td class="border px-4 py-2">
+				<a
 					class="bg-amber-500 text-white active:bg-orange-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-					href={`${$page.route.id}/${item.id}`}>View</a
-				></td
-			>
-			<td
-				><form method="POST">
+					href={`${$page.route.id}/${item.id}`}
+				>
+					View
+				</a>
+			</td>
+			<td class="border px-4 py-2">
+				<form method="POST">
 					<input type="hidden" name="id" value={item.id} />
 					<button
 						class="bg-orange-500 text-white active:bg-orange-600 font-bold uppercase text-xs px-4 py-2 rounded-full shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
 						formaction="?/delete"
 					>
-						<i class="fas fa-heart" />Delete</button
-					>
-				</form></td
-			>
+						Delete
+					</button>
+				</form>
+			</td>
 		</tr>
 	{/each}
 </table>
