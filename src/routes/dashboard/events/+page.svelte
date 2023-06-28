@@ -25,7 +25,7 @@
 		<th class="border px-4 py-2">Title</th>
 		<th class="border px-4 py-2">Description</th>
 		<th class="border px-4 py-2">Created At</th>
-		<th class="border px-4 py-2">Solved?</th>
+		<th class="border px-4 py-2">Approval_status</th>
 		<th class="border px-4 py-2">View</th>
 		<th class="border px-4 py-2">Delete</th>
 	</tr>
@@ -36,7 +36,7 @@
 			<td class="border px-4 py-2">{item.attributes.Title}</td>
 			<td class="border px-4 py-2">{item.attributes.Description}</td>
 			<td class="border px-4 py-2">{formatDate(item.attributes.createdAt)}</td>
-			<td class="border px-4 py-2">{item.attributes.solved ? 'Yes' : 'No'}</td>
+			<td class="border px-4 py-2">{item.attributes.Approval_status}</td>
 			<td class="border px-4 py-2">
 				<a
 					class="bg-amber-500 text-white active:bg-orange-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
