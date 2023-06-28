@@ -4,6 +4,7 @@
 	let tennantlist = [
 		{ label: 'Overview', slug: '' },
 		{ label: 'Make Complaint', slug: '/complaints' },
+		{ label: 'View Tenants', slug: '/tenants' },
 		{ label: 'Rent Event Space', slug: '/events' },
 		{ label: 'Tennant Out-form', slug: '/out-forms' },
 		{ label: 'Request Maintenance', slug: '/maintenances' },
