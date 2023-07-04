@@ -1,0 +1,13 @@
+node_modules
+.github
+.storybook
+.git
+.gitattributes
+build
+.eslintignore
+.eslintrc.cjs
+.svelte-kit
+.prettierrc
+.pretieriignore
+README.MD
+.env.example
