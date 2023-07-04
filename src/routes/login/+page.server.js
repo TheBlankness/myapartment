@@ -3,7 +3,7 @@
 import axios from 'axios';
 import { PUBLIC_API_URL } from '$env/static/public';
 import { redirect } from '@sveltejs/kit';
-
+red;
 axios.defaults.baseURL = PUBLIC_API_URL;
 
 export function load({ cookies }) {
